@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+<body>
+    <p> Hello, This is Suman. Please look in to my details.</p>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!-- // By these scripts, we are inducing react in to our project. -->
+<script>
+    
+    const FirstName = React.createElement('h1', {
+        style: {
+            'display': 'inline'
+        }
+    }, 'My Full Name is Guguloth');
+    const LastName = React.createElement('h1', {style: {
+            'display': 'inline'
+        }}, ' Suman Naik');
+
+    const FullName = React.createElement(
+                    'div', 
+                    {
+                    id: 'FullName'
+                    }, 
+                    [FirstName, LastName]
+                    );
+
+    const Address = React.createElement('h1', {}, 'I am From Sri Ram Nagar, Suryapet, Telangana');   
+    const Age = React.createElement('h1', {}, 'I am 22 year Old');             
+
+    const Parent = React.createElement('div', 
+                    {id: 'details', style: {
+                        "color": 'blue',
+                        "background-color": 'yellow'
+                    }},
+                    [FullName, Address, Age]);
+    
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(Parent);
+</script>
+</html>
