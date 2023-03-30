@@ -1,0 +1,20 @@
+body {
+    margin: 0px;
+}
+
+.header-container {
+    background: yellow;
+}
+.details-container {
+    background-color: cadetblue;
+    margin: 0px;
+}
+.firstname {
+display: inline;
+}
+.lastname {
+    display: inline;
+}
+.footer-container{
+    display:inline
+}
